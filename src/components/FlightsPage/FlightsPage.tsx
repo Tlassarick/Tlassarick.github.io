@@ -46,7 +46,7 @@ const FlightsPage: React.FC = () => {
       {/* Відображення карток рейсів у сітці */}
       <Grid container spacing={2}>
         {sortedFlights.map(flight => (
-          <Grid item xs={12} sm={6} md={4} key={flight.id}>
+          <Grid key={flight.id}>
              {/* Картка одного рейсу, при кліку – перехід на сторінку деталей */}
             <Card sx={{ cursor: 'pointer' }} onClick={() => navigate(`/flights/${flight.id}`)}>
               <CardContent>

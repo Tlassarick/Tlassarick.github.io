@@ -61,7 +61,7 @@ const FlightDetailsPage: React.FC = () => {
        {/* Сітка місць */}
       <Grid container spacing={1}>
         {seats.map((seat) => (
-          <Grid item xs={1} key={seat.seatNumber}>
+          <Grid key={seat.seatNumber}>
             <Button
               onClick={() => handleSelect(seat)}
               variant={seat.occupied ? "outlined" : selected === seat.seatNumber ? "contained" : "outlined"}
